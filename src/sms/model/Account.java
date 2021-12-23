@@ -26,7 +26,12 @@ public class Account {
 
 
 
-    public Boolean loginAdmin(Account user) {
+    public Boolean loginUser(Account user) {
+        Boolean status = ph.findUser(user);
+        return status;
+    }
+
+    public Boolean signUpUser(Account user) {
         Boolean status = ph.checkUser(user);
         return status;
     }
