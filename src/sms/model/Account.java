@@ -26,8 +26,9 @@ public class Account {
 
 
 
-    public void loginAdmin(Account user) {
-        ph.checkUser(user);
+    public Boolean loginAdmin(Account user) {
+        Boolean status = ph.checkUser(user);
+        return status;
     }
 
 }

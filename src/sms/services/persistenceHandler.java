@@ -2,5 +2,5 @@ package sms.services;
 import sms.model.Account;
 
 public abstract class persistenceHandler {
-    public abstract void checkUser(Account acc);
+    public abstract Boolean checkUser(Account acc);
 }

@@ -28,7 +28,19 @@ public class loginC {
 
 		// Sending data to Account class through Maintenance Office ( Main Controller )
 		persistenceFactory pf = new persistenceFactory();
-        moc.accountObj.loginAdmin(user);
+        Boolean status = moc.accountObj.loginAdmin(user);
+		if (status == true)
+		{
+			// todo: load admin dashboard
+		}
+		else if (status == false)
+		{
+			// todo: incorrect password popup
+		}
+		else if (status == null)
+		{
+			// todo: email not found
+		}
 
 	}
 }

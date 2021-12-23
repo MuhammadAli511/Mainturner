@@ -7,18 +7,26 @@ import sms.model.Account;
 
 
 public class fileHandler extends persistenceHandler {
-    public void checkUser(Account acc) {
+    public Boolean checkUser(Account acc) {
         try {
             File myObj = new File("Account.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-                System.out.println(data);
+                String[] dataArr = data.split(",");
+                if (dataArr[1].equals(acc.getEmail()) == true && dataArr[2].equals(acc.getPassword()) == true){
+                    return true;
+                }
+                else if (dataArr[1].equals(acc.getEmail()) == true && dataArr[2].equals(acc.getPassword()) == false)
+                {
+                    return false;
+                }
             }
             myReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+        return null;
     }
 }
