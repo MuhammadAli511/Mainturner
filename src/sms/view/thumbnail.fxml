@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="305.0" style="-fx-background-color: #87ceeb;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.Maintenance_management_system.view.ThumbnailController">
+   <children>
+      <ImageView fx:id="thumb" fitHeight="204.0" fitWidth="305.0" pickOnBounds="true">
+         <image>
+            <Image url="@elec.png" />
+         </image>
+      </ImageView>
+      <Pane layoutY="204.0" prefHeight="70.0" prefWidth="305.0" style="-fx-background-color: #dddddd;">
+         <children>
+            <Label fx:id="name1" layoutX="104.0" layoutY="14.0" text="Arshad Rafiq">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="rating1" layoutX="121.0" layoutY="35.0" text="4.2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="153.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@star.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</Pane>
