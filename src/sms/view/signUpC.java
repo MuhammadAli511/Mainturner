@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import sms.Exceptions.customException;
 import sms.controller.maintenanceOffice;
 import sms.model.Account;
 import sms.services.persistenceFactory;
@@ -52,30 +53,43 @@ public class signUpC {
         // Fetching data from UI
         String email = email_Box.getText();
         String password = password_Box.getText();
-
-        // Creating Account object and setting fetched data as its parameters
-        Account user = new Account();
-        user.setEmail(email);
-        user.setPassword(password);
-
-        // Sending data to Account class through Maintenance Office ( Main Controller )
-        persistenceFactory pf = new persistenceFactory();
-        Boolean status = moc.accountObj.signUpUser(user);
-        if (status == true)
+        boolean checking = checkEmail(email);
+        if (checking == true)
         {
-            Parent personalDetailsPage = FXMLLoader.load(getClass().getResource("personalDetails.fxml"));
-            Stage window = (Stage) personalDetails.getScene().getWindow();
-            window.setUserData(user);
-            window.setScene(new Scene(personalDetailsPage));
-        }
-        else if (status == false)
-        {
-            Parent root = FXMLLoader.load(getClass().getResource("emailPopup2.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setTitle("Redundant Email");
-            stage.setScene(scene);
-            stage.show();
+            // Creating Account object and setting fetched data as its parameters
+            Account user = new Account();
+            user.setEmail(email);
+            user.setPassword(password);
+
+            // Sending data to Account class through Maintenance Office ( Main Controller )
+            persistenceFactory pf = new persistenceFactory();
+            Boolean status = moc.accountObj.signUpUser(user);
+            if (status == true)
+            {
+                Parent personalDetailsPage = FXMLLoader.load(getClass().getResource("personalDetails.fxml"));
+                Stage window = (Stage) personalDetails.getScene().getWindow();
+                window.setUserData(user);
+                window.setScene(new Scene(personalDetailsPage));
+            }
+            else if (status == false)
+            {
+                Parent root = FXMLLoader.load(getClass().getResource("emailPopup2.fxml"));
+                Scene scene = new Scene(root);
+                Stage stage = new Stage();
+                stage.setTitle("Redundant Email");
+                stage.setScene(scene);
+                stage.show();
+            }
         }
     }
+    public boolean checkEmail(String email)
+    {
+        for(int i=0;i<email.length();i++) {
+            if (email.charAt(i) == '@') {
+                return true;
+            }
+        }
+        throw new customException("Email does not have @");
+    }
+
 }

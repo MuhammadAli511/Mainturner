@@ -1,1 +1,8 @@
-1,Electrician,1000,7,i am an elec,1
+1,Electrician,2000,7,i am an Electrician,1
+2,Plumber,500,4,i am a Plumber,2
+3,Carpenter,2000,8,i am a Carpenter,3
+4,Mechanic,1000,4,i am a Mechanic,4
+5,Maid,400,3,i am a Maid,5
+6,Babysitter,800,2,i am a Babysitter,6
+
+

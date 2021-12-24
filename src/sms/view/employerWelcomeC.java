@@ -41,6 +41,7 @@ public class employerWelcomeC {
         String user = (String) stage.getUserData();
         Parent hirePage = FXMLLoader.load(getClass().getResource("hireR.fxml"));
         Stage window = (Stage) hireL.getScene().getWindow();
+        window.setUserData(user);
         window.setScene(new Scene(hirePage));
     }
     public void bookingsBox(MouseEvent click) throws IOException

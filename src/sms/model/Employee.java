@@ -3,6 +3,8 @@ package sms.model;
 import sms.services.fileHandler;
 import sms.services.persistenceHandler;
 
+import java.util.List;
+
 public class Employee {
     private String name;
     private String cnic;
@@ -62,4 +64,10 @@ public class Employee {
         Boolean status = ph.saveEmployee(user,acc1);
         return status;
     }
+    public List getEmployees()
+    {
+        List status = ph.getAllData();
+        return status;
+    }
+
 }

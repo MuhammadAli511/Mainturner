@@ -60,5 +60,4 @@ public class mainPageC {
 		Stage window = (Stage) about.getScene().getWindow();
 		window.setScene(new Scene(signPage));
 	}
-	
 }

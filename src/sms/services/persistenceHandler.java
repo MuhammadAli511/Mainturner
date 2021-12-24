@@ -4,6 +4,8 @@ import sms.model.Employee;
 import sms.model.Employer;
 import sms.model.Service;
 
+import java.util.List;
+
 public abstract class persistenceHandler {
     public abstract Boolean findEmployee(Account acc);
     public abstract Boolean findEmployer(Account acc);
@@ -16,4 +18,5 @@ public abstract class persistenceHandler {
     public abstract String getEmployee1(Account acc);
     public abstract String getEmployer1(Account user);
     public abstract Boolean addService(Service serv, String user);
+    public abstract List getAllData();
 }

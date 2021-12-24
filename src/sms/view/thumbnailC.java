@@ -2,7 +2,9 @@ package sms.view;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import sms.model.Employee;
 
 public class thumbnailC {
 	@FXML
@@ -12,13 +14,12 @@ public class thumbnailC {
 	@FXML
 	private Label rating1;
 	
-	/*public void setData(Employee em)
+	public void setData(Employee em)
 	{
-		String path1 = em.getThumbSrc();
-		Image img1 = new Image(getClass().getResourceAsStream("elec.png"));
+		Image img1 = new Image(getClass().getResourceAsStream("images/person.jpg"));
 		thumb.setImage(img1);
 		name1.setText(em.getName());
-		rating1.setText(em.getRating());
-	}*/
+		rating1.setText(em.getAddress());
+	}
 	
 }

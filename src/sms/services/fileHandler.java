@@ -3,6 +3,8 @@ import java.io.File;  // Import the File class
 import java.io.FileNotFoundException;  // Import this class to handle errors
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner; // Import the Scanner class to read text files
 import sms.model.Account;
 import sms.model.Employee;
@@ -304,6 +306,30 @@ public class fileHandler extends persistenceHandler {
             System.out.println("File Writting error");
         }
         return true;
+    }
+
+    public List getAllData()
+    {
+        List ret = new ArrayList<>();
+        try {
+            File read_File = new File("Employee.txt");
+            Scanner read_Input = new Scanner(read_File);
+            while (read_Input.hasNextLine()) {
+                String read_Line = read_Input.nextLine();
+                String[] data_Arr = read_Line.split(",");
+                    Employee send = new Employee();
+                    send.setName(data_Arr[1]);
+                    send.setCnic(data_Arr[2]);
+                    send.setAge(data_Arr[3]);
+                    send.setAddress(data_Arr[4]);
+                    send.setPhone(data_Arr[5]);
+                    send.setAccountID(data_Arr[6]);
+                    ret.add(send);
+                }
+            } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return ret;
     }
 
 

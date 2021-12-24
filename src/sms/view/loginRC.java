@@ -12,8 +12,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import sms.model.Account;
-import sms.model.Employee;
-import sms.model.Employer;
 import sms.services.persistenceFactory;
 
 import java.io.IOException;
