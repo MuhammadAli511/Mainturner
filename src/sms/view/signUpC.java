@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -18,7 +19,7 @@ public class signUpC {
     @FXML
     public TextField email_Box;
     public TextField password_Box;
-    public Pane personalDetails;
+    public Label personalDetails;
     public maintenanceOffice moc = new maintenanceOffice();
 
     public void signUpClick(MouseEvent click) throws IOException
@@ -39,14 +40,15 @@ public class signUpC {
         {
             Parent personalDetailsPage = FXMLLoader.load(getClass().getResource("personalDetails.fxml"));
             Stage window = (Stage) personalDetails.getScene().getWindow();
+            window.setUserData(user);
             window.setScene(new Scene(personalDetailsPage));
         }
         else if (status == false)
         {
-            Parent root = FXMLLoader.load(getClass().getResource("passwordPopup.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("emailPopup2.fxml"));
             Scene scene = new Scene(root);
             Stage stage = new Stage();
-            stage.setTitle("Incorrect Password");
+            stage.setTitle("Redundant Email");
             stage.setScene(scene);
             stage.show();
         }

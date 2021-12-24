@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" style="-fx-background-color: #21212b;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.employeeWelcomeC">
+   <children>
+      <Pane layoutX="594.0" layoutY="130.0" prefHeight="68.0" prefWidth="235.0">
+         <children>
+            <Label layoutX="12.0" layoutY="9.0" prefHeight="40.0" prefWidth="225.0" style="-fx-font-size: 28;" text="Welcome " textFill="WHITE">
+               <font>
+                  <Font name="Bradley Hand ITC" size="12.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <Pane opacity="0.68" prefHeight="113.0" prefWidth="1400.0" style="-fx-background-color: #292935;">
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="138.0" layoutX="31.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="145.0" layoutY="56.0" prefHeight="43.0" prefWidth="242.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Maintenence Office">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Pane fx:id="home" layoutX="1243.0" layoutY="22.0" onMouseClicked="#logout" prefHeight="68.0" prefWidth="122.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Logout">
+                     <font>
+                        <Font name="Arial" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <HBox layoutX="158.0" layoutY="243.0" prefHeight="441.0" prefWidth="1067.0" spacing="180.0">
+         <children>
+            <Pane prefHeight="442.0" prefWidth="235.0" style="-fx-background-color: lightgrey; -fx-background-radius: 16;">
+               <children>
+                  <Label fx:id="accountL" alignment="CENTER" layoutX="37.0" layoutY="372.0" onMouseClicked="#accountBox" prefHeight="42.0" prefWidth="162.0" style="-fx-border-style: solid; -fx-border-radius: 15; -fx-font-size: 28; -fx-background-color: #655283; -fx-background-radius: 15;" text="Account" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="31.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea editable="false" focusColor="#9a9ca2" layoutX="22.0" layoutY="213.0" prefHeight="119.0" prefWidth="191.0" text="you can View your personal information including you email&#10;password, and edit your personal information " unFocusColor="#8a7070">
+                     <font>
+                        <Font name="Candara Light" size="13.0" />
+                     </font>
+                  </JFXTextArea>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/1_u.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="442.0" prefWidth="235.0" style="-fx-background-color: lightgrey; -fx-background-radius: 16;">
+               <children>
+                  <Label fx:id="servicesL" alignment="CENTER" layoutX="37.0" layoutY="372.0" onMouseClicked="#servicesBox" prefHeight="42.0" prefWidth="162.0" style="-fx-border-style: solid; -fx-border-radius: 15; -fx-font-size: 28; -fx-background-color: #655283; -fx-background-radius: 15;" text="Services" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="31.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea editable="false" focusColor="#9a9ca2" layoutX="23.0" layoutY="204.0" prefHeight="119.0" prefWidth="191.0" text="you can View your personal information including you email&#10;password, and edit your personal information " unFocusColor="#8a7070">
+                     <font>
+                        <Font name="Candara Light" size="13.0" />
+                     </font>
+                  </JFXTextArea>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="40.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/3_u.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="442.0" prefWidth="235.0" style="-fx-background-color: lightgrey; -fx-background-radius: 16;">
+               <children>
+                  <Label fx:id="bookingsL" alignment="CENTER" layoutX="37.0" layoutY="372.0" onMouseClicked="#bookingsBox" prefHeight="42.0" prefWidth="162.0" style="-fx-border-style: solid; -fx-border-radius: 15; -fx-font-size: 28; -fx-background-color: #655283; -fx-background-radius: 15;" text="Bookngs" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="31.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea editable="false" focusColor="#9a9ca2" layoutX="23.0" layoutY="197.0" prefHeight="119.0" prefWidth="191.0" text="you can View your personal information including you email&#10;password, and edit your personal information " unFocusColor="#8a7070">
+                     <font>
+                        <Font name="Candara Light" size="13.0" />
+                     </font>
+                  </JFXTextArea>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/2_u.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+   <cursor>
+      <Cursor fx:constant="TEXT" />
+   </cursor>
+</Pane>

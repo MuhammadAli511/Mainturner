@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" style="-fx-background-color: #21212b;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" style="-fx-background-color: #21212b;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.personalDetailsC">
    <children>
       <Pane layoutX="630.0" layoutY="602.0" prefHeight="75.0" prefWidth="171.0">
          <children>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="13.0" prefHeight="58.0" prefWidth="148.0" style="-fx-border-style: solid; -fx-border-radius: 8; -fx-font-size: 28; -fx-background-color: #4682B4; -fx-background-radius: 15;" text="Sign Up" textFill="WHITE">
+            <Label fx:id="signUpB" alignment="CENTER" layoutX="14.0" layoutY="13.0" onMouseClicked="#signupClick" prefHeight="58.0" prefWidth="148.0" style="-fx-border-style: solid; -fx-border-radius: 8; -fx-font-size: 28; -fx-background-color: #4682B4; -fx-background-radius: 15;" text="Sign Up" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Semilight" size="31.0" />
                </font>
@@ -37,7 +37,7 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Pane layoutX="1243.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
+            <Pane fx:id="contact" layoutX="1243.0" layoutY="22.0" onMouseClicked="#contactClick" prefHeight="68.0" prefWidth="122.0">
                <children>
                   <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Contact">
                      <font>
@@ -46,7 +46,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="1104.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
+            <Pane fx:id="about" layoutX="1104.0" layoutY="22.0" onMouseClicked="#aboutClick" prefHeight="68.0" prefWidth="122.0">
                <children>
                   <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="About Us">
                      <font>
@@ -55,7 +55,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="968.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
+            <Pane fx:id="home" layoutX="968.0" layoutY="22.0" onMouseClicked="#homeClick" prefHeight="68.0" prefWidth="122.0">
                <children>
                   <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Home">
                      <font>
@@ -70,7 +70,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <TextField layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter name" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
+                  <TextField fx:id="name" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter name" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -92,7 +92,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <TextField layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter phone number" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
+                  <TextField fx:id="phoneno" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter phone number" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -114,7 +114,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <TextField layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter cnic" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
+                  <TextField fx:id="cnic" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter cnic" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -136,7 +136,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <TextField layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter age" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
+                  <TextField fx:id="age" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter age" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -158,7 +158,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <TextField layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter name" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
+                  <TextField fx:id="address" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter name" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
                      <font>
                         <Font size="14.0" />
                      </font>

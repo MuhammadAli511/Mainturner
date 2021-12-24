@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" style="-fx-background-color: #21212b;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.mainPageC">
+   <children>
+      <Pane layoutX="-1.0" opacity="0.68" prefHeight="113.0" prefWidth="1400.0" style="-fx-background-color: #292935;">
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="138.0" layoutX="31.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="145.0" layoutY="56.0" prefHeight="43.0" prefWidth="242.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Maintenence Office">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Pane layoutX="1243.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Contact">
+                     <font>
+                        <Font name="Arial" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="1104.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="About Us">
+                     <font>
+                        <Font name="Arial" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="968.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Home">
+                     <font>
+                        <Font name="Arial" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</Pane>

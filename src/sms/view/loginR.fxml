@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" style="-fx-background-color: #21212b;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.loginRC">
+   <children>
+      <Pane layoutX="549.0" layoutY="280.0" prefHeight="59.0" prefWidth="304.0">
+         <children>
+            <TextField fx:id="email_Box" layoutX="4.0" layoutY="1.0" prefHeight="59.0" prefWidth="298.0" promptText="Enter email" style="-fx-background-color: #21212b; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 2;" />
+         </children>
+      </Pane>
+      <Pane layoutX="579.0" layoutY="559.0" prefHeight="95.0" prefWidth="245.0">
+         <children>
+            <Label fx:id="loginB" alignment="CENTER" layoutX="48.0" layoutY="15.0" onMouseClicked="#loginClick" prefHeight="65.0" prefWidth="150.0" style="-fx-cursor: hand; -fx-background-color: #4682B4; -fx-background-radius: 8;" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semilight" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane opacity="0.68" prefHeight="113.0" prefWidth="1400.0" style="-fx-background-color: #292935;">
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="138.0" layoutX="31.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="145.0" layoutY="56.0" prefHeight="43.0" prefWidth="242.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Maintenence Office">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Pane fx:id="contact" layoutX="1243.0" layoutY="22.0" onMouseClicked="#contactClick" prefHeight="68.0" prefWidth="122.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Contact">
+                     <font>
+                        <Font name="Arial" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="about" layoutX="1104.0" layoutY="22.0" onMouseClicked="#aboutClick" prefHeight="68.0" prefWidth="122.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="About Us">
+                     <font>
+                        <Font name="Arial" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="home" layoutX="968.0" layoutY="22.0" onMouseClicked="#homeClick" prefHeight="68.0" prefWidth="122.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Home">
+                     <font>
+                        <Font name="Arial" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="549.0" layoutY="232.0" prefWidth="304.0" />
+      <Pane layoutX="549.0" layoutY="371.0" prefHeight="75.0" prefWidth="304.0">
+         <children>
+            <TextField fx:id="password_Box" layoutX="3.0" layoutY="8.0" prefHeight="59.0" prefWidth="298.0" promptText="Enter password" style="-fx-background-color: #21212b; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 2;" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

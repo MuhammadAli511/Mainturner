@@ -20,7 +20,7 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Pane layoutX="1243.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
+            <Pane layoutX="1243.0" layoutY="22.0" onMouseClicked="#contactClick" prefHeight="68.0" prefWidth="122.0">
                <children>
                   <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Contact">
                      <font>
@@ -29,7 +29,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="1104.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
+            <Pane layoutX="1104.0" layoutY="22.0" onMouseClicked="#aboutClick" prefHeight="68.0" prefWidth="122.0">
                <children>
                   <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="About Us">
                      <font>
@@ -59,7 +59,7 @@
             <Font name="Arial Italic" size="45.0" />
          </font>
       </Label>
-      <Pane layoutX="531.0" layoutY="390.0" prefHeight="68.0" prefWidth="338.0" style="-fx-background-color: #4682B4; -fx-background-radius: 8;">
+      <Pane fx:id="login_Page_E" layoutX="531.0" layoutY="390.0" onMouseClicked="#loadEmployeeLoginPage" prefHeight="68.0" prefWidth="338.0" style="-fx-background-color: #4682B4; -fx-background-radius: 8;">
          <children>
             <Label layoutX="117.0" layoutY="17.0" text="Employee" textFill="WHITE">
                <font>
@@ -68,7 +68,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="531.0" layoutY="481.0" prefHeight="68.0" prefWidth="338.0" style="-fx-background-color: #4682B4; -fx-background-radius: 8;">
+      <Pane fx:id="login_Page_R" layoutX="531.0" layoutY="481.0" onMouseClicked="#loadEmployerLoginPage" prefHeight="68.0" prefWidth="338.0" style="-fx-background-color: #4682B4; -fx-background-radius: 8;">
          <children>
             <Label layoutX="117.0" layoutY="17.0" text="Employer" textFill="WHITE">
                <font>
