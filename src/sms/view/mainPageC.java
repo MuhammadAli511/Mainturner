@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -18,6 +19,7 @@ public class mainPageC {
 	public Pane login_Page_R;
 	public Pane about;
 	public Pane contact;
+	public Label sign;
 
 	
 	public void loadLoginPage() throws IOException
@@ -48,9 +50,15 @@ public class mainPageC {
 
 	public void aboutClick(MouseEvent click) throws IOException
 	{
-		Parent aboutPage = FXMLLoader.load(getClass().getResource("aboutPage.fxml"));
+		Parent aboutPage = FXMLLoader.load(getClass().getResource("about.fxml"));
 		Stage window = (Stage) about.getScene().getWindow();
 		window.setScene(new Scene(aboutPage));
+	}
+	public void signclick(MouseEvent click) throws IOException
+	{
+		Parent signPage = FXMLLoader.load(getClass().getResource("signUp.fxml"));
+		Stage window = (Stage) about.getScene().getWindow();
+		window.setScene(new Scene(signPage));
 	}
 	
 }

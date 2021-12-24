@@ -6,12 +6,14 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import sms.controller.maintenanceOffice;
 
 import java.io.IOException;
 
-public class contactC {
+public class aboutC {
     public Pane home;
-    public Pane about;
+    public Pane contact;
+
 
     public void homeClick(MouseEvent click) throws IOException
     {
@@ -20,10 +22,10 @@ public class contactC {
         window.setScene(new Scene(mainPage));
     }
 
-    public void aboutClick(MouseEvent click) throws IOException
+    public void contactClick(MouseEvent click) throws IOException
     {
-        Parent aboutPage = FXMLLoader.load(getClass().getResource("about.fxml"));
-        Stage window = (Stage) about.getScene().getWindow();
-        window.setScene(new Scene(aboutPage));
+        Parent contactPage = FXMLLoader.load(getClass().getResource("contact.fxml"));
+        Stage window = (Stage) contact.getScene().getWindow();
+        window.setScene(new Scene(contactPage));
     }
 }

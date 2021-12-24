@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" style="-fx-background-color: #21212b;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" style="-fx-background-color: #21212b;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.createServiceC">
    <children>
       <Pane opacity="0.68" prefHeight="113.0" prefWidth="1400.0" style="-fx-background-color: #292935;">
          <children>
             <ImageView fitHeight="119.0" fitWidth="138.0" layoutX="31.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@test1.png" />
+                  <Image url="@images/logo.png" />
                </image>
             </ImageView>
             <Label layoutX="145.0" layoutY="56.0" prefHeight="43.0" prefWidth="242.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Maintenence Office">
@@ -23,33 +23,6 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Pane layoutX="1243.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Contact">
-                     <font>
-                        <Font name="Arial" size="23.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <Pane layoutX="1104.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="About Us">
-                     <font>
-                        <Font name="Arial" size="23.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <Pane layoutX="968.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Home">
-                     <font>
-                        <Font name="Arial" size="23.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
          </children>
       </Pane>
       <Pane layoutX="585.0" layoutY="121.0" prefHeight="58.0" prefWidth="231.0">
@@ -61,7 +34,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <JFXComboBox focusColor="#21212b" layoutY="7.0" prefHeight="50.0" prefWidth="288.0" promptText="  Choose a service" style="-fx-border-radius: 8; -fx-border-color: white; -fx-border-width: 2; -fx-text-fill: white; -fx-prompt-text-fill: white; -fx-font-size: 14;" unFocusColor="#21212b" />
+                  <ChoiceBox fx:id="serviceNameBox" layoutX="1.0" layoutY="10.0" prefHeight="50.0" prefWidth="288.0" />
                </children>
             </Pane>
             <Pane layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="138.0">
@@ -87,7 +60,7 @@
                   </Label>
                </children>
             </Pane>
-            <JFXTextArea layoutX="42.0" layoutY="57.0" prefHeight="176.0" prefWidth="496.0" style="-fx-text-fill: white; -fx-font-size: 14; -fx-border-color: white; -fx-border-width: 2;" />
+            <JFXTextArea fx:id="description" layoutX="42.0" layoutY="57.0" prefHeight="176.0" prefWidth="496.0" style="-fx-text-fill: white; -fx-font-size: 14; -fx-border-color: white; -fx-border-width: 2;" />
          </children>
       </Pane>
       <Pane layoutX="478.0" layoutY="587.0" prefHeight="43.0" prefWidth="138.0">
@@ -103,7 +76,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <TextField layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter charges" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white; -fx-text-fill: white;">
+                  <TextField fx:id="charges" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter charges" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white; -fx-text-fill: white;">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -125,7 +98,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <JFXComboBox focusColor="#21212b" layoutY="7.0" prefHeight="50.0" prefWidth="288.0" promptText="  Enter experience years" style="-fx-border-radius: 8; -fx-border-color: white; -fx-border-width: 2; -fx-text-fill: white; -fx-prompt-text-fill: white; -fx-font-size: 14;" unFocusColor="#21212b" />
+                  <ChoiceBox fx:id="experienceBox" layoutY="9.0" prefHeight="50.0" prefWidth="288.0" />
                </children>
             </Pane>
             <Pane layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="138.0">
@@ -141,9 +114,18 @@
       </Pane>
       <Pane layoutX="573.0" layoutY="644.0" prefHeight="75.0" prefWidth="255.0">
          <children>
-            <Label alignment="CENTER" layoutX="34.0" layoutY="9.0" prefHeight="58.0" prefWidth="187.0" style="-fx-border-style: solid; -fx-border-radius: 8; -fx-font-size: 28; -fx-background-color: #4682B4; -fx-background-radius: 15;" text="Create Service" textFill="WHITE">
+            <Label fx:id="create" alignment="CENTER" layoutX="34.0" layoutY="9.0" onMouseClicked="#created" prefHeight="58.0" prefWidth="187.0" style="-fx-border-style: solid; -fx-border-radius: 8; -fx-font-size: 28; -fx-background-color: #4682B4; -fx-background-radius: 15;" text="Create Service" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Semilight" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="home" layoutX="1263.0" layoutY="42.0" onMouseClicked="#logout" prefHeight="68.0" prefWidth="122.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Logout">
+               <font>
+                  <Font name="Arial" size="23.0" />
                </font>
             </Label>
          </children>

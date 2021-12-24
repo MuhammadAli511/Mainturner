@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" style="-fx-background-color: #21212b;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.mainPageC">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" style="-fx-background-color: #21212b;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.contactC">
    <children>
-      <Pane layoutX="-1.0" opacity="0.68" prefHeight="113.0" prefWidth="1400.0" style="-fx-background-color: #292935;">
+      <Pane opacity="0.68" prefHeight="113.0" prefWidth="1400.0" style="-fx-background-color: #292935;">
          <children>
             <ImageView fitHeight="119.0" fitWidth="138.0" layoutX="31.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -20,16 +20,7 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Pane layoutX="1243.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Contact">
-                     <font>
-                        <Font name="Arial" size="23.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <Pane layoutX="1104.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
+            <Pane fx:id="about" layoutX="1243.0" layoutY="22.0" onMouseClicked="#aboutClick" prefHeight="68.0" prefWidth="122.0">
                <children>
                   <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="About Us">
                      <font>
@@ -38,15 +29,109 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="968.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
+            <Pane layoutX="1104.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Home">
-                     <font>
-                        <Font name="Arial" size="23.0" />
-                     </font>
-                  </Label>
+                  <Pane fx:id="home" onMouseClicked="#homeClick" prefHeight="68.0" prefWidth="122.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Home">
+                           <font>
+                              <Font name="Arial" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
                </children>
             </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="603.0" layoutY="119.0" prefHeight="90.0" prefWidth="268.0">
+         <children>
+            <Label layoutX="27.0" layoutY="15.0" prefHeight="66.0" prefWidth="230.0" style="-fx-text-fill: white;" text="Contact Us">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="157.0" layoutY="235.0" prefHeight="437.0" prefWidth="1099.0">
+         <children>
+            <Label layoutX="52.0" layoutY="37.0" style="-fx-text-fill: white;" text="How to reach us?">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="207.0" style="-fx-text-fill: white;" text="i190599@nu.edu.pk">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="256.0" style="-fx-text-fill: white;" text="i190525@nu.edu.pk">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="306.0" style="-fx-text-fill: white;" text="i190417@nu.edu.pk">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Pane layoutX="144.0" layoutY="117.0" prefHeight="75.0" prefWidth="94.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="67.0" layoutX="17.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/mail.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="503.0" layoutY="117.0" prefHeight="75.0" prefWidth="94.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="68.0" layoutX="25.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/phone.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="457.0" layoutY="207.0" style="-fx-text-fill: white;" text="+92 335 5651395">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="457.0" layoutY="256.0" style="-fx-text-fill: white;" text="+92 317 5845605">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="457.0" layoutY="306.0" style="-fx-text-fill: white;" text="+92 322 5036358">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Pane layoutX="807.0" layoutY="117.0" prefHeight="75.0" prefWidth="94.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="67.0" layoutX="25.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/github.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="798.0" layoutY="207.0" style="-fx-text-fill: white;" text="sarooh421">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="769.0" layoutY="306.0" style="-fx-text-fill: white;" text="MuhammadAli511">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="799.0" layoutY="256.0" style="-fx-text-fill: white;" text="Oheed911">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

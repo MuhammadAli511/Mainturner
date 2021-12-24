@@ -45,4 +45,13 @@ public class Account {
         return status;
     }
 
+    public String getEmployee(Account user) {
+        String status = ph.getEmployee1(user);
+        return status;
+    }
+
+    public String getEmployer(Account user) {
+        String status = ph.getEmployer1(user);
+        return status;
+    }
 }

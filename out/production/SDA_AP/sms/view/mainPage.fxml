@@ -20,7 +20,7 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Pane layoutX="1243.0" layoutY="22.0" onMouseClicked="#contactClick" prefHeight="68.0" prefWidth="122.0">
+            <Pane fx:id="contact" layoutX="1243.0" layoutY="22.0" onMouseClicked="#contactClick" prefHeight="68.0" prefWidth="122.0">
                <children>
                   <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Contact">
                      <font>
@@ -29,7 +29,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="1104.0" layoutY="22.0" onMouseClicked="#aboutClick" prefHeight="68.0" prefWidth="122.0">
+            <Pane fx:id="about" layoutX="1104.0" layoutY="22.0" onMouseClicked="#aboutClick" prefHeight="68.0" prefWidth="122.0">
                <children>
                   <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="About Us">
                      <font>
@@ -86,5 +86,10 @@
             </Label>
          </children>
       </Pane>
+      <Label fx:id="sign" layoutX="559.0" layoutY="675.0" onMouseClicked="#signclick" text="Don't have an account, CLICK HERE" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

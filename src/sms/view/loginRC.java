@@ -12,6 +12,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import sms.model.Account;
+import sms.model.Employee;
+import sms.model.Employer;
 import sms.services.persistenceFactory;
 
 import java.io.IOException;
@@ -75,9 +77,11 @@ public class loginRC {
 		}
 		else if (status == true)
 		{
+			String emp = moc.accountObj.getEmployer(user);
 			System.out.println("User Logged In");
 			Parent loginPage = FXMLLoader.load(getClass().getResource("employerWelcome.fxml"));
 			Stage window = (Stage) loginB.getScene().getWindow();
+			window.setUserData(emp);
 			window.setScene(new Scene(loginPage));
 		}
 		else if (status == false)

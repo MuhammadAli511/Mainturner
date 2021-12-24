@@ -7,6 +7,7 @@ import java.util.Scanner; // Import the Scanner class to read text files
 import sms.model.Account;
 import sms.model.Employee;
 import sms.model.Employer;
+import sms.model.Service;
 
 
 public class fileHandler extends persistenceHandler {
@@ -207,4 +208,103 @@ public class fileHandler extends persistenceHandler {
         }
         return true;
     }
+    public String getEmployee1(Account acc)
+    {
+        String acc_email = acc.getEmail();
+        String index = "";
+        String ret = "";
+        Employee send = new Employee();
+        try {
+            File read_File = new File("AccountEmployee.txt");
+            Scanner read_Input = new Scanner(read_File);
+            while (read_Input.hasNextLine()) {
+                String read_Line = read_Input.nextLine();
+                String[] data_Arr = read_Line.split(",");
+                if (data_Arr[1].equals(acc_email) == true)
+                {
+                    index = data_Arr[0];
+                }
+            }
+        } catch (FileNotFoundException error) {}
+
+
+        try {
+            File read_File = new File("Employee.txt");
+            Scanner read_Input = new Scanner(read_File);
+            while (read_Input.hasNextLine()) {
+                String read_Line = read_Input.nextLine();
+                String[] data_Arr = read_Line.split(",");
+                if (data_Arr[6].equals(index) == true)
+                {
+                    ret = data_Arr[0];
+                    send.setName(data_Arr[1]);
+                    send.setCnic(data_Arr[2]);
+                    send.setAge(data_Arr[3]);
+                    send.setAddress(data_Arr[4]);
+                    send.setPhone(data_Arr[5]);
+                    send.setAccountID(data_Arr[6]);
+                }
+            }
+        } catch (FileNotFoundException error) {}
+        return ret;
+    }
+    public String getEmployer1(Account acc)
+    {
+        String acc_email = acc.getEmail();
+        String index = "";
+        String ret = "";
+        Employer send = new Employer();
+        try {
+            File read_File = new File("AccountEmployer.txt");
+            Scanner read_Input = new Scanner(read_File);
+            while (read_Input.hasNextLine()) {
+                String read_Line = read_Input.nextLine();
+                String[] data_Arr = read_Line.split(",");
+                if (data_Arr[1].equals(acc_email) == true)
+                {
+                    index = data_Arr[0];
+                }
+            }
+        } catch (FileNotFoundException error) {}
+
+
+        try {
+            File read_File = new File("Employer.txt");
+            Scanner read_Input = new Scanner(read_File);
+            while (read_Input.hasNextLine()) {
+                String read_Line = read_Input.nextLine();
+                String[] data_Arr = read_Line.split(",");
+                if (data_Arr[6].equals(index) == true)
+                {
+                    ret = data_Arr[0];
+                    send.setName(data_Arr[1]);
+                    send.setCnic(data_Arr[2]);
+                    send.setAge(data_Arr[3]);
+                    send.setAddress(data_Arr[4]);
+                    send.setPhone(data_Arr[5]);
+                    send.setAccountID(data_Arr[6]);
+                }
+            }
+        } catch (FileNotFoundException error) {}
+        return ret;
+    }
+
+    public Boolean addService(Service serv,String id)
+    {
+        try {
+            String index;
+            FileWriter write_Data = new FileWriter("Services.txt",true);
+            index = getIndex("Services.txt");
+            String writing_Data = "";
+            writing_Data = index+","+serv.getServiceName()+","+serv.getCharges()+","+serv.getExperience()+","+serv.getServiceDescription()+","+id;
+            writing_Data += "\n";
+            write_Data.write(writing_Data);
+            write_Data.close();
+        } catch (IOException error) {
+            System.out.println("File Writting error");
+        }
+        return true;
+    }
+
+
 }

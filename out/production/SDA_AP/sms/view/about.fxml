@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" style="-fx-background-color: #21212b;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.aboutC">
+   <children>
+      <Pane opacity="0.68" prefHeight="113.0" prefWidth="1400.0" style="-fx-background-color: #292935;">
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="138.0" layoutX="31.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="145.0" layoutY="56.0" prefHeight="43.0" prefWidth="242.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Maintenence Office">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Pane fx:id="contact" layoutX="1243.0" layoutY="22.0" onMouseClicked="#contactClick" prefHeight="68.0" prefWidth="122.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Contact">
+                     <font>
+                        <Font name="Arial" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="1104.0" layoutY="22.0" prefHeight="68.0" prefWidth="122.0">
+               <children>
+                  <Pane fx:id="home" onMouseClicked="#homeClick" prefHeight="68.0" prefWidth="122.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="75.0" prefWidth="122.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Home">
+                           <font>
+                              <Font name="Arial" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="603.0" layoutY="119.0" prefHeight="90.0" prefWidth="242.0">
+         <children>
+            <Label layoutX="27.0" layoutY="15.0" prefHeight="61.0" prefWidth="188.0" style="-fx-text-fill: white;" text="About Us">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="147.0" layoutY="235.0" prefHeight="437.0" prefWidth="776.0">
+         <children>
+            <Label layoutX="63.0" layoutY="36.0" style="-fx-text-fill: white;" text="Mission Statment">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="108.0" style="-fx-text-fill: white;" text="&quot;We hire the best possible employees to deliver our best services&quot;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="174.0" style="-fx-text-fill: white;" text="What we do?">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="229.0" style="-fx-text-fill: white;" text="We provide our employees to your door step">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="264.0" style="-fx-text-fill: white;" text="Get your services by just a Click">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="299.0" prefHeight="35.0" prefWidth="434.0" style="-fx-text-fill: white;" text="Get your work done, pay your employee">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="334.0" style="-fx-text-fill: white;" text="Your'e good to go">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="1062.0" layoutY="403.0" prefHeight="237.0" prefWidth="242.0">
+         <children>
+            <ImageView fitHeight="210.0" fitWidth="213.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/aboutUs.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</Pane>

@@ -20,8 +20,33 @@ public class signUpC {
     public TextField email_Box;
     public TextField password_Box;
     public Label personalDetails;
+    public Pane home;
+    public Pane contact;
+    public Pane about;
+
+
     public maintenanceOffice moc = new maintenanceOffice();
 
+
+    public void contactClick(MouseEvent click) throws IOException
+    {
+        Parent contactPage = FXMLLoader.load(getClass().getResource("contact.fxml"));
+        Stage window = (Stage) contact.getScene().getWindow();
+        window.setScene(new Scene(contactPage));
+    }
+
+    public void aboutClick(MouseEvent click) throws IOException
+    {
+        Parent aboutPage = FXMLLoader.load(getClass().getResource("about.fxml"));
+        Stage window = (Stage) about.getScene().getWindow();
+        window.setScene(new Scene(aboutPage));
+    }
+    public void homeClick(MouseEvent click) throws IOException
+    {
+        Parent mainPage = FXMLLoader.load(getClass().getResource("mainPage.fxml"));
+        Stage window = (Stage) home.getScene().getWindow();
+        window.setScene(new Scene(mainPage));
+    }
     public void signUpClick(MouseEvent click) throws IOException
     {
         // Fetching data from UI

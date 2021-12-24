@@ -13,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("view/signUp"));
+        scene = new Scene(loadFXML("view/mainPage"));
         stage.setScene(scene);
         stage.show();
     }

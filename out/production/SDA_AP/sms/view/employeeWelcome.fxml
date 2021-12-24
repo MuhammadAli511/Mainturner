@@ -70,7 +70,7 @@
                         <Font name="Segoe UI Semilight" size="31.0" />
                      </font>
                   </Label>
-                  <JFXTextArea editable="false" focusColor="#9a9ca2" layoutX="23.0" layoutY="204.0" prefHeight="119.0" prefWidth="191.0" text="you can View your personal information including you email&#10;password, and edit your personal information " unFocusColor="#8a7070">
+                  <JFXTextArea editable="false" focusColor="#9a9ca2" layoutX="23.0" layoutY="204.0" prefHeight="119.0" prefWidth="191.0" text="you can View all the services that you are providing to the Employers and can add new services.&#10;" unFocusColor="#8a7070">
                      <font>
                         <Font name="Candara Light" size="13.0" />
                      </font>
@@ -89,7 +89,7 @@
                         <Font name="Segoe UI Semilight" size="31.0" />
                      </font>
                   </Label>
-                  <JFXTextArea editable="false" focusColor="#9a9ca2" layoutX="23.0" layoutY="197.0" prefHeight="119.0" prefWidth="191.0" text="you can View your personal information including you email&#10;password, and edit your personal information " unFocusColor="#8a7070">
+                  <JFXTextArea editable="false" focusColor="#9a9ca2" layoutX="23.0" layoutY="197.0" prefHeight="119.0" prefWidth="191.0" text="you can View who have hired you. All the details of Bookings!&#10;" unFocusColor="#8a7070">
                      <font>
                         <Font name="Candara Light" size="13.0" />
                      </font>
