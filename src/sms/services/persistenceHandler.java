@@ -18,5 +18,7 @@ public abstract class persistenceHandler {
     public abstract String getEmployee1(Account acc);
     public abstract String getEmployer1(Account user);
     public abstract Boolean addService(Service serv, String user);
-    public abstract List getAllData();
+    public abstract List getAllData(String serviceName);
+    public abstract Service empCosts(String serv,String user);
+    public abstract Employee getEmployee2(String id);
 }

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" style="-fx-background-color: #21212b;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.employeeInfoC">
+   <children>
+      <Pane layoutX="630.0" layoutY="602.0" prefHeight="75.0" prefWidth="171.0">
+         <children>
+            <Label fx:id="book" alignment="CENTER" layoutX="14.0" layoutY="13.0" onMouseClicked="#bookService" prefHeight="58.0" prefWidth="148.0" style="-fx-border-style: solid; -fx-border-radius: 8; -fx-font-size: 28; -fx-background-color: #4682B4; -fx-background-radius: 15;" text="Book" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semilight" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="562.0" layoutY="113.0" prefHeight="58.0" prefWidth="331.0">
+         <children>
+            <Label layoutX="12.0" layoutY="9.0" prefHeight="40.0" prefWidth="288.0" style="-fx-font-size: 28;" text="Employee Information" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane opacity="0.68" prefHeight="113.0" prefWidth="1400.0" style="-fx-background-color: #292935;">
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="138.0" layoutX="31.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="145.0" layoutY="56.0" prefHeight="43.0" prefWidth="242.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Maintenence Office">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="976.0" layoutY="240.0" prefHeight="134.0" prefWidth="349.0">
+         <children>
+            <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
+               <children>
+                  <Label layoutX="27.0" layoutY="15.0" prefHeight="40.0" prefWidth="225.0" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="51.0" layoutY="192.0" prefHeight="58.0" prefWidth="331.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Name:" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameU" layoutX="104.0" layoutY="9.0" prefHeight="40.0" prefWidth="213.0" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="51.0" layoutY="240.0" prefHeight="58.0" prefWidth="384.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Hourly Charges:" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="base_Charges" layoutX="162.0" layoutY="9.0" prefHeight="40.0" prefWidth="201.0" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="51.0" layoutY="298.0" prefHeight="58.0" prefWidth="349.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Start Time:" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="hourSBox" focusColor="#21212b" layoutX="156.0" layoutY="11.0" prefHeight="29.0" prefWidth="56.0" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2;" unFocusColor="#21212b" />
+            <JFXComboBox fx:id="apSBox" focusColor="#21212b" layoutX="265.0" layoutY="11.0" prefHeight="29.0" prefWidth="56.0" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2;" unFocusColor="#21212b" />
+         </children>
+      </Pane>
+      <JFXButton fx:id="proceed" layoutX="160.0" layoutY="549.0" onMouseClicked="#proceedPrice" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #4682B4;" text="Calculate Price" textFill="WHITE" />
+      <Pane layoutX="51.0" layoutY="356.0" prefHeight="58.0" prefWidth="349.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="End Time:" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="hourEBox" focusColor="#21212b" layoutX="157.0" layoutY="15.0" prefHeight="29.0" prefWidth="56.0" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2;" unFocusColor="#21212b" />
+            <JFXComboBox fx:id="apEBox" focusColor="#21212b" layoutX="265.0" layoutY="15.0" prefHeight="29.0" prefWidth="56.0" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2;" unFocusColor="#21212b" />
+         </children>
+      </Pane>
+      <Pane layoutX="51.0" layoutY="432.0" prefHeight="58.0" prefWidth="384.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Total Charges:" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="total_Charges" layoutX="151.0" layoutY="9.0" prefHeight="40.0" prefWidth="213.0" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton fx:id="viewD" layoutX="174.0" layoutY="496.0" onMouseClicked="#viewDet" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #4682B4;" text="View Details" textFill="WHITE" />
+   </children>
+</Pane>

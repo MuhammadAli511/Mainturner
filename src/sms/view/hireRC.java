@@ -1,17 +1,23 @@
 package sms.view;
 
-import javafx.event.EventHandler;
+import com.jfoenix.controls.JFXComboBox;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import sms.controller.maintenanceOffice;
 import sms.model.Employee;
+import sms.model.Service;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -20,51 +26,75 @@ import java.util.List;
 public class hireRC {
 	@FXML
 	public GridPane empGrid;
-	public List<Employee> emps;
-	public List<Pane> paneArr = new ArrayList<>();
+	public List<Employee> displayEmp;
+	ObservableList<String> serviceNameList = FXCollections.observableArrayList();
+	public JFXComboBox<String> serviceNameBox;
+	public Button search;
+	public ToggleGroup selected = new ToggleGroup();
+	public Button bookOne;
+	public String saveName;
 
-
-
+	public List<RadioButton> rdArr = new ArrayList<>();
 	public maintenanceOffice moc = new maintenanceOffice();
-	
-	public void initialize() throws IOException
+
+	@FXML
+	public void initialize()
 	{
-		int col = 0;
+		serviceNameList.add("Electrician");
+		serviceNameList.add("Plumber");
+		serviceNameList.add("Carpenter");
+		serviceNameList.add("Mechanic");
+		serviceNameList.add("Maid");
+		serviceNameList.add("Babysitter");
+		serviceNameBox.setItems(serviceNameList);
+	}
+
+	public void searchClick(MouseEvent click) throws IOException
+	{
+		int columns = 0;
 		int rows = 1;
-		List<Employee> list2 = employees();
-		emps = new ArrayList(list2);
+		String serviceName = serviceNameBox.getValue();
+		saveName = serviceName;
+		List<Employee> employeeList = moc.employeeObj.getEmployees(serviceName);
+		displayEmp = new ArrayList(employeeList);
 		try {
-			for (int i = 0 ; i < emps.size() ; i++)
+			for (int i = 0 ; i < displayEmp.size() ; i++)
 			{
 				FXMLLoader fl = new FXMLLoader();
 				fl.setLocation(getClass().getResource("thumbnail.fxml"));
 				Pane pan = fl.load();
-				paneArr.add(pan);
 				thumbnailC tc = fl.getController();
-				tc.setData(emps.get(i));
-
-				if (col == 4)
+				tc.setData(displayEmp.get(i),serviceName);
+				if (columns == 4)
 				{
-					col = 0;
+					columns = 0;
 					++rows;
 				}
-				empGrid.add(pan, col++, rows);
+				Pane temp = (Pane) pan.getChildren().get(1);
+				RadioButton rd = (RadioButton) temp.getChildren().get(5);
+				rdArr.add(rd);
+				rd.setToggleGroup(selected);
+				empGrid.add(pan, columns++, rows);
 				empGrid.setMargin(pan,new Insets(10));
 			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-
+		} catch (IOException e) {}
 	}
-	public List<Employee> employees()
+
+	public void proceedClick(MouseEvent click) throws IOException
 	{
-		List<Employee> list1 = moc.employeeObj.getEmployees();
-		for (int i = 0 ; i < list1.size() ; i++)
+		String id1 = "";
+		for (int i = 0 ; i < rdArr.size() ; i++)
 		{
-			//System.out.println(list1.get(i).getName());
+			if (rdArr.get(i).isSelected() == true)
+			{
+				Service tempSer = moc.serviceObj.empCost(saveName,rdArr.get(i).getText());
+				String send = tempSer.getId() + "," + tempSer.getServiceName() + "," + tempSer.getCharges() + "," + tempSer.getExperience() + ",";
+				send += tempSer.getServiceDescription() + "," + tempSer.getEmpID() ;
+				Parent empPage = FXMLLoader.load(getClass().getResource("employeeInfo.fxml"));
+				Stage window = (Stage) bookOne.getScene().getWindow();
+				window.setUserData(send);
+				window.setScene(new Scene(empPage));
+			}
 		}
-		return list1;
 	}
 }

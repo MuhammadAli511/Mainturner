@@ -138,6 +138,10 @@ public class fileHandler extends persistenceHandler {
             while (read_Input.hasNextLine()) {
                 String read_Line = read_Input.nextLine();
                 String[] data_Arr = read_Line.split(",");
+                if (data_Arr[0].equals(null) || data_Arr[0].equals(""))
+                {
+                    return "1";
+                }
                 index = Integer.valueOf(data_Arr[0]);
             }
             index++;
@@ -239,17 +243,37 @@ public class fileHandler extends persistenceHandler {
                 if (data_Arr[6].equals(index) == true)
                 {
                     ret = data_Arr[0];
-                    send.setName(data_Arr[1]);
-                    send.setCnic(data_Arr[2]);
-                    send.setAge(data_Arr[3]);
-                    send.setAddress(data_Arr[4]);
-                    send.setPhone(data_Arr[5]);
-                    send.setAccountID(data_Arr[6]);
                 }
             }
         } catch (FileNotFoundException error) {}
         return ret;
     }
+
+    public Employee getEmployee2(String id)
+    {
+        try {
+            File read_File = new File("Employee.txt");
+            Employee em = new Employee();
+            Scanner read_Input = new Scanner(read_File);
+            while (read_Input.hasNextLine()) {
+                String read_Line = read_Input.nextLine();
+                String[] data_Arr = read_Line.split(",");
+                if (data_Arr[0].equals(id) == true)
+                {
+                    em.setName(data_Arr[1]);
+                    em.setCnic(data_Arr[2]);
+                    em.setAge(data_Arr[3]);
+                    em.setAddress(data_Arr[4]);
+                    em.setPhone(data_Arr[5]);
+                    return em;
+                }
+            }
+        } catch (FileNotFoundException error) {}
+        return null;
+    }
+
+
+
     public String getEmployer1(Account acc)
     {
         String acc_email = acc.getEmail();
@@ -279,12 +303,6 @@ public class fileHandler extends persistenceHandler {
                 if (data_Arr[6].equals(index) == true)
                 {
                     ret = data_Arr[0];
-                    send.setName(data_Arr[1]);
-                    send.setCnic(data_Arr[2]);
-                    send.setAge(data_Arr[3]);
-                    send.setAddress(data_Arr[4]);
-                    send.setPhone(data_Arr[5]);
-                    send.setAccountID(data_Arr[6]);
                 }
             }
         } catch (FileNotFoundException error) {}
@@ -308,8 +326,25 @@ public class fileHandler extends persistenceHandler {
         return true;
     }
 
-    public List getAllData()
+    public List getAllData(String serviceName)
     {
+        List serv = new ArrayList<>();
+        try {
+            File read_File1 = new File("Services.txt");
+            Scanner read_Input1 = new Scanner(read_File1);
+            while (read_Input1.hasNextLine()) {
+                String read_Line1 = read_Input1.nextLine();
+                String[] sep1 = read_Line1.split(",");
+                if (sep1[1].equals(serviceName) == true)
+                {
+                    serv.add(sep1[5]);
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
         List ret = new ArrayList<>();
         try {
             File read_File = new File("Employee.txt");
@@ -317,19 +352,53 @@ public class fileHandler extends persistenceHandler {
             while (read_Input.hasNextLine()) {
                 String read_Line = read_Input.nextLine();
                 String[] data_Arr = read_Line.split(",");
-                    Employee send = new Employee();
-                    send.setName(data_Arr[1]);
-                    send.setCnic(data_Arr[2]);
-                    send.setAge(data_Arr[3]);
-                    send.setAddress(data_Arr[4]);
-                    send.setPhone(data_Arr[5]);
-                    send.setAccountID(data_Arr[6]);
-                    ret.add(send);
+                for (int i = 0 ; i < serv.size() ; i++)
+                {
+                    if (serv.get(i).equals(data_Arr[0]))
+                    {
+                        Employee send = new Employee();
+                        send.setId(data_Arr[0]);
+                        send.setName(data_Arr[1]);
+                        send.setCnic(data_Arr[2]);
+                        send.setAge(data_Arr[3]);
+                        send.setAddress(data_Arr[4]);
+                        send.setPhone(data_Arr[5]);
+                        send.setAccountID(data_Arr[6]);
+                        ret.add(send);
+                    }
                 }
-            } catch (FileNotFoundException e) {
+            }
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         return ret;
+    }
+
+    public Service empCosts(String serv,String user)
+    {
+        List serv2 = new ArrayList<>();
+        Service ser = new Service();
+        try {
+            File read_File1 = new File("Services.txt");
+            Scanner read_Input1 = new Scanner(read_File1);
+            while (read_Input1.hasNextLine()) {
+                String read_Line1 = read_Input1.nextLine();
+                String[] sep3 = read_Line1.split(",");
+                if (sep3[1].equals(serv) == true && sep3[5].equals(user) == true)
+                {
+                    ser.setId(sep3[0]);
+                    ser.setServiceName(sep3[1]);
+                    ser.setCharges(sep3[2]);
+                    ser.setExperience(sep3[3]);
+                    ser.setServiceDescription(sep3[4]);
+                    ser.setEmpID(sep3[5]);
+                    return ser;
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 

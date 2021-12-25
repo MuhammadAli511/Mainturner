@@ -6,6 +6,7 @@ import sms.services.persistenceHandler;
 import java.util.List;
 
 public class Employee {
+    private String id;
     private String name;
     private String cnic;
     private String phone;
@@ -13,6 +14,14 @@ public class Employee {
     private String address;
     private String accountID;
     public persistenceHandler ph = new fileHandler();
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getAccountID() {
         return accountID;
@@ -64,9 +73,15 @@ public class Employee {
         Boolean status = ph.saveEmployee(user,acc1);
         return status;
     }
-    public List getEmployees()
+    public List getEmployees(String serviceName)
     {
-        List status = ph.getAllData();
+        List status = ph.getAllData(serviceName);
+        return status;
+    }
+
+    public Employee getEmployee2(String id)
+    {
+        Employee status = ph.getEmployee2(id);
         return status;
     }
 

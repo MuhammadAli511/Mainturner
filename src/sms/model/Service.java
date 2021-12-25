@@ -4,10 +4,30 @@ import sms.services.fileHandler;
 import sms.services.persistenceHandler;
 
 public class Service {
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     private String serviceName;
     private String serviceDescription;
     private String experience;
     private String charges;
+    private String empID;
+
+    public String getEmpID() {
+        return empID;
+    }
+
+    public void setEmpID(String empID) {
+        this.empID = empID;
+    }
+
     public persistenceHandler ph = new fileHandler();
 
     public String getServiceName() {
@@ -44,6 +64,11 @@ public class Service {
 
     public Boolean registerService(Service serv, String user) {
         Boolean status = ph.addService(serv,user);
+        return status;
+    }
+
+    public Service empCost(String serv,String user){
+        Service status = ph.empCosts(serv,user);
         return status;
     }
 }
