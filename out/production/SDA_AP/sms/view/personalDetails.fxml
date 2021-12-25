@@ -70,7 +70,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <TextField fx:id="name" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter name" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
+                  <TextField fx:id="name" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter name" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white; -fx-text-fill: white;">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -92,7 +92,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <TextField fx:id="phoneno" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter phone number" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
+                  <TextField fx:id="phoneno" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter phone number" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white; -fx-text-fill: white;">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -114,7 +114,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <TextField fx:id="cnic" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter cnic" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
+                  <TextField fx:id="cnic" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter cnic" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white; -fx-text-fill: white;">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -136,7 +136,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <TextField fx:id="age" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter age" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
+                  <TextField fx:id="age" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter age" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white; -fx-text-fill: white;">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -158,7 +158,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <TextField fx:id="address" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter name" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white;">
+                  <TextField fx:id="address" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter name" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white; -fx-text-fill: white;">
                      <font>
                         <Font size="14.0" />
                      </font>

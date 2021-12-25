@@ -13,6 +13,30 @@ import sms.model.Service;
 
 
 public class fileHandler extends persistenceHandler {
+    public static class Threading implements Runnable{
+        @Override
+        public void run(){
+            try {
+                File read_File = new File("AccountEmployee.txt");
+                Scanner read_Input = new Scanner(read_File);
+                int index = 0;
+                while (read_Input.hasNextLine()) {
+                    String read_Line = read_Input.nextLine();
+                    String[] data_Arr = read_Line.split(",");
+                    if (data_Arr[0].equals(null) || data_Arr[0].equals(""))
+                    {
+                        System.out.println("Empty file");
+                    }
+                    index = Integer.valueOf(data_Arr[0]);
+                }
+                index++;
+                String indexS = Integer.toString(index);
+                System.out.println("Index: "+indexS);
+            } catch (FileNotFoundException error) {
+                System.out.println(error);
+            }
+        }
+    }
     public Boolean findEmployee(Account acc) {
         try {
             File myObj = new File("AccountEmployee.txt");
@@ -170,6 +194,8 @@ public class fileHandler extends persistenceHandler {
         String index = "";
         try {
             FileWriter write_Data = new FileWriter("AccountEmployee.txt",true);
+            fileHandler.Threading th = new Threading();
+            th.run();
             index = getIndex("AccountEmployee.txt");
             String writing_Data = "";
             writing_Data = index+","+acc.getEmail()+","+acc.getPassword();

@@ -83,7 +83,7 @@
                <children>
                   <Pane prefHeight="75.0" prefWidth="304.0">
                      <children>
-                        <TextField fx:id="password_Box" layoutX="3.0" layoutY="8.0" prefHeight="59.0" prefWidth="298.0" promptText="Enter password" style="-fx-background-color: #21212b; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 2;" />
+                        <TextField fx:id="password_Box" layoutX="3.0" layoutY="8.0" prefHeight="59.0" prefWidth="298.0" promptText="Enter password" style="-fx-background-color: #21212b; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 2; -fx-text-fill: white;" />
                      </children>
                   </Pane>
                </children>
@@ -111,7 +111,7 @@
       </Label>
       <Pane layoutX="580.0" layoutY="290.0" prefHeight="59.0" prefWidth="304.0">
          <children>
-            <TextField fx:id="email_Box" layoutX="4.0" layoutY="1.0" prefHeight="59.0" prefWidth="298.0" promptText="Enter email" style="-fx-background-color: #21212b; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 2;" />
+            <TextField fx:id="email_Box" layoutX="4.0" layoutY="1.0" prefHeight="59.0" prefWidth="298.0" promptText="Enter email" style="-fx-background-color: #21212b; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 2; -fx-text-fill: white;" />
          </children>
       </Pane>
    </children>

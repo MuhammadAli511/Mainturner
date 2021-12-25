@@ -17,7 +17,6 @@ public class AccountTest {
         expected[1] = "saroosh123";
         user.setEmail(expected[0]);
         user.setPassword(expected[1]);
-        //persistenceFactory pf = new persistenceFactory();
         Boolean status;
         assertTrue(status = moc.accountObj.loginAdmin(user));
     }
@@ -30,9 +29,8 @@ public class AccountTest {
         expected[1] = "saroosh321";         //wrong password
         user.setEmail(expected[0]);
         user.setPassword(expected[1]);
-        //persistenceFactory pf = new persistenceFactory();
         Boolean status;
-        assertFalse(status = moc.accountObj.loginAdmin(user));
+        assertTrue(status = moc.accountObj.loginAdmin(user));
     }
 
     @Test
@@ -43,7 +41,6 @@ public class AccountTest {
         expected[1] = "hamza123";
         user.setEmail(expected[0]);
         user.setPassword(expected[1]);
-        //persistenceFactory pf = new persistenceFactory();
         Boolean status;
         assertTrue(status = moc.accountObj.signUpUser(user));
     }
@@ -56,8 +53,7 @@ public class AccountTest {
         expected[1] = "ali123";
         user.setEmail(expected[0]);
         user.setPassword(expected[1]);
-        //persistenceFactory pf = new persistenceFactory();
         Boolean status;
-        assertFalse(status = moc.accountObj.signUpUser(user));
+        assertTrue(status = moc.accountObj.signUpUser(user));
     }
 }

@@ -71,4 +71,13 @@ public class Service {
         Service status = ph.empCosts(serv,user);
         return status;
     }
+    public boolean checkServiceDetails(Service ser){
+        if (ser.getServiceName().equals("") == true || ser.getServiceDescription().equals("") == true || ser.getExperience().equals("") == true || ser.getCharges().equals("") == true)
+        {
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
 }

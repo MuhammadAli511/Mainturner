@@ -84,5 +84,14 @@ public class Employee {
         Employee status = ph.getEmployee2(id);
         return status;
     }
+    public boolean checkPersonalDetails(Employee tempE){
+        if (tempE.getName().equals("") == true || tempE.getAge().equals("") == true || tempE.getPhone().equals("") == true || tempE.getCnic().equals("") == true || tempE.getAddress().equals("") == true)
+        {
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
 
 }

@@ -34,7 +34,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <ChoiceBox fx:id="serviceNameBox" layoutX="1.0" layoutY="10.0" prefHeight="50.0" prefWidth="288.0" style="-fx-background-color: #21212b; -fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2;" />
+                  <ChoiceBox fx:id="serviceNameBox" layoutX="1.0" layoutY="10.0" prefHeight="50.0" prefWidth="288.0" />
                </children>
             </Pane>
             <Pane layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="138.0">
@@ -60,7 +60,7 @@
                   </Label>
                </children>
             </Pane>
-            <JFXTextArea fx:id="description" layoutX="42.0" layoutY="57.0" prefHeight="176.0" prefWidth="496.0" style="-fx-text-fill: white; -fx-font-size: 14; -fx-border-color: white; -fx-border-width: 2;" />
+            <JFXTextArea fx:id="description" layoutX="42.0" layoutY="57.0" prefHeight="176.0" prefWidth="496.0" style="-fx-text-fill: white;" />
          </children>
       </Pane>
       <Pane layoutX="478.0" layoutY="587.0" prefHeight="43.0" prefWidth="138.0">
@@ -76,7 +76,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <TextField fx:id="charges" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter charges" style="-fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2; -fx-background-color: #21212b; -fx-prompt-text-fill: white; -fx-text-fill: white;">
+                  <TextField fx:id="charges" layoutX="9.0" layoutY="5.0" prefHeight="58.0" prefWidth="271.0" promptText="  Enter charges" style="-fx-background-color: #21212b; -fx-border-color: white; -fx-border-radius: 8; -fx-border-width: 2;">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -98,7 +98,7 @@
          <children>
             <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
                <children>
-                  <ChoiceBox fx:id="experienceBox" layoutY="9.0" prefHeight="50.0" prefWidth="288.0" style="-fx-background-color: #21212b; -fx-border-radius: 8; -fx-border-width: 2; -fx-border-color: white;" />
+                  <ChoiceBox fx:id="experienceBox" layoutY="9.0" prefHeight="50.0" prefWidth="288.0" />
                </children>
             </Pane>
             <Pane layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="138.0">

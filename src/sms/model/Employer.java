@@ -64,4 +64,13 @@ public class Employer {
         Boolean status = ph.saveEmployer(user,acc1);
         return status;
     }
+    public boolean checkPersonalDetails(Employer tempE){
+        if (tempE.getName().equals("") == true || tempE.getAge().equals("") == true || tempE.getPhone().equals("") == true || tempE.getCnic().equals("") == true || tempE.getAddress().equals("") == true)
+        {
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
 }
