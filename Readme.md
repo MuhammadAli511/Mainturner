@@ -3,7 +3,7 @@
 ## Contributors: 
 [Muhammad Ali](https://github.com/MuhammadAli511)
 
-[Oheed Imran](https://github.com/Saroosh421)
+[Oheed Imran](https://github.com/Oheed911)
 
 [Saroosh Hammad](https://github.com/Saroosh421)
 
