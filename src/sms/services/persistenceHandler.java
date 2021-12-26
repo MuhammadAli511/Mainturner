@@ -21,4 +21,5 @@ public abstract class persistenceHandler {
     public abstract List getAllData(String serviceName);
     public abstract Service empCosts(String serv,String user);
     public abstract Employee getEmployee2(String id);
+    public abstract Boolean saveBooking(String user);
 }

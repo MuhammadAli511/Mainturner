@@ -427,5 +427,21 @@ public class fileHandler extends persistenceHandler {
         return null;
     }
 
-
+    public Boolean saveBooking(String user)
+    {
+        String[] dataArr = user.split(",");
+        try {
+            String index;
+            FileWriter write_Data = new FileWriter("Booking.txt",true);
+            index = getIndex("Booking.txt");
+            String writing_Data = "";
+            writing_Data = index+","+dataArr[6]+","+dataArr[5]+","+dataArr[2]+","+dataArr[7];
+            writing_Data += "\n";
+            write_Data.write(writing_Data);
+            write_Data.close();
+        } catch (IOException error) {
+            System.out.println("File Writting error");
+        }
+        return true;
+    }
 }

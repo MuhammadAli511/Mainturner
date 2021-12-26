@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" style="-fx-background-color: #21212b;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.view.paymentC">
+   <children>
+      <Pane layoutX="594.0" layoutY="130.0" prefHeight="68.0" prefWidth="235.0">
+         <children>
+            <Label layoutX="12.0" layoutY="9.0" prefHeight="40.0" prefWidth="225.0" style="-fx-font-size: 28;" text="Select Payment" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane opacity="0.68" prefHeight="113.0" prefWidth="1400.0" style="-fx-background-color: #292935;">
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="138.0" layoutX="31.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="145.0" layoutY="56.0" prefHeight="43.0" prefWidth="242.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Maintenence Office">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="526.0" layoutY="198.0" prefHeight="134.0" prefWidth="349.0">
+         <children>
+            <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
+               <children>
+                  <Label fx:id="price" layoutX="27.0" layoutY="15.0" prefHeight="40.0" prefWidth="225.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 8;" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="171.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="7.0" text="Total Charges" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="526.0" layoutY="323.0" prefHeight="134.0" prefWidth="349.0">
+         <children>
+            <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
+               <children>
+                  <ComboBox fx:id="priceeBox" layoutX="12.0" layoutY="22.0" prefHeight="25.0" prefWidth="253.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="225.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="7.0" text="Payment Type" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="1193.0" layoutY="635.0" prefHeight="75.0" prefWidth="171.0">
+         <children>
+            <Label fx:id="next" alignment="CENTER" layoutX="14.0" layoutY="13.0" onMouseClicked="#nextPage" prefHeight="58.0" prefWidth="148.0" style="-fx-border-style: solid; -fx-border-radius: 8; -fx-font-size: 28; -fx-background-color: #4682B4; -fx-background-radius: 15;" text="Next" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semilight" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="526.0" layoutY="457.0" prefHeight="134.0" prefWidth="349.0">
+         <children>
+            <Pane layoutX="55.0" layoutY="57.0" prefHeight="68.0" prefWidth="288.0">
+               <children>
+                  <TextField layoutX="13.0" layoutY="7.0" prefHeight="52.0" prefWidth="261.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="209.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="7.0" text="Enter mobile number" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</Pane>

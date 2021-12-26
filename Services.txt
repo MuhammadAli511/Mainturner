@@ -7,3 +7,6 @@
 7,Mechanic,900,4,i am a Mechanic,18,Plumber,1000,5,I'm a plumber,1
 8,Plumber,1000,5,I'm a plumber,1
 9,Plumber,1000,1,i do plumbing,13
+10,Plumber,1000,5,I'm a plumber,1
+11,Plumber,1000,5,I'm a plumber,1
+12,Plumber,10,3,asd,17

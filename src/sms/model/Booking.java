@@ -1,10 +1,12 @@
 package sms.model;
 
+import sms.services.fileHandler;
+import sms.services.persistenceHandler;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.awt.print.Book;
 
 @Entity
 @Table(name="booking")
@@ -20,6 +22,8 @@ public class Booking {
     private String serviceID;
     @Column(name = "timeData")
     private String time;
+
+    public persistenceHandler ph = new fileHandler();
     public Booking(){}
     public Booking(String employeeID,String employerID,String serviceID,String time)
     {
@@ -69,14 +73,9 @@ public class Booking {
         this.time = time;
     }
 
-    @Override
-    public String toString() {
-        return "Booking{" +
-                "id=" + id +
-                ", employerID='" + employerID + '\'' +
-                ", employeeID='" + employeeID + '\'' +
-                ", serviceID='" + serviceID + '\'' +
-                ", time='" + time + '\'' +
-                '}';
+
+    public Boolean addBooking(String user) {
+        Boolean status = ph.saveBooking(user);
+        return status;
     }
 }

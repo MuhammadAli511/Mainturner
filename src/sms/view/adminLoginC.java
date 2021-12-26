@@ -2,6 +2,7 @@ package sms.view;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -72,10 +73,14 @@ public class adminLoginC {
         }
         else if (status == true)
         {
-            System.out.println("Admin Logged In");
-            /*Parent loginPage = FXMLLoader.load(getClass().getResource("adminDashboard.fxml"));
+            Node node = (Node) click.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            String userid = (String) stage.getUserData();
+
+            Parent loginPage = FXMLLoader.load(getClass().getResource("adminDashboard.fxml"));
             Stage window = (Stage) loginB.getScene().getWindow();
-            window.setScene(new Scene(loginPage));*/
+            window.setUserData(userid);
+            window.setScene(new Scene(loginPage));
         }
         else if (status == false)
         {
